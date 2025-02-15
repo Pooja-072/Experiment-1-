@@ -5,4 +5,5 @@ To find the DC, Transient and AC analysis of a Common Source Amplifier.<br>
 <br>
 ### COMPONENTS :<br>
 Resistor, n-mosfet, Voltage source(Power Supply), AC ground, Wires.<br>
-### CIRCUIT DIAGRAM <br>
+### CIRCUIT DIAGRAM : <br>
+
