@@ -108,8 +108,20 @@ It helps to understand how the amplifier handles small signals and different fre
 9. For Transient Analysis set the dc offset as 0.9V, amplitude 50mV, and frequency as 1kHz and keep the stop time for 3ms and run.<br>
 10. For AC Analysis set the sweep as decade , number of points per decade as 20, start frequency as 0.1Hz and stop frequency as 1T(Tera)Hz.<br>
 <br>
+### TABULAR COLUMN:<br>
+For the DC Analysis, to get the calculated value of Id , you need to vary the width and check for the corresponding Vout.<br>
+| Width  | Current | Vout  |
+|--------|---------|-------|
+| 1um    | 27uA    | 1.1V  |
+| 1.2um  | 32.6uA  | 1.1V  |
+| 1.4um  | 38.1uA  | 1.1 V |
+| 1.6um  | 43.5uA  | 1.1V  | 
+| 2um    | 54.5uA  | 1.1V  |
+|2.02um  | 55.5um  | 1.1V  |
+<br>
 ### SIMULATION RESULT :<br>
 1. DC Analysis:<br>
 Given the power as 100uW ,we know that Vdd is 1.8V<br>
 from the formula P=VI<br>
 Id=P/V = 100u/1.8 = 55.5uA<br>
+![Image](https://github.com/user-attachments/assets/d94001ce-d099-4093-b6d3-6e34777315c1)<br>
