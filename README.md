@@ -132,4 +132,4 @@ where Vds>Vov. Mosfet lies in saturation region.<br>
 Therefore the dc operting point is(1.1V,55.5uA)<br>
 <br>
 2.Transient Analysis:<br>
-
+![Image](https://github.com/user-attachments/assets/c257f3bd-a802-42b8-9038-6c1a748738a8)
