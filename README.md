@@ -57,14 +57,18 @@ For the DC Analysis, to get the calculated value of Id , you need to vary the wi
 ![Image](https://github.com/user-attachments/assets/790c17a8-1d4a-403c-9d04-5dbb265bfa63)
 <br>
 <br>
-From the above diagram,
+From the simulation ,
 We got Id=55.5uA for width=0.203um and Vout=1.745V.<br>
+Vds=Vout=1.745V<br>
+Vov = Vgs-Vth = Vin-Vth = 0.54V<br>
+where Vds>Vov. Mosfet lies in saturation region.<br>
 Therefore the dc operting point is(1.745V,55.5uA)<br>
 <br>
 2.Transient Analysis:<br>
 ![Image](https://github.com/user-attachments/assets/f49f7252-c005-4211-bf09-b73caa773b0f)<br>
 <br>
 we got vout = 1.745V for width = 0.203um and a phase shift of 180 degree.<br>
+Gain,Av = Vout/Vin = 1.745/0.9 = 1.938<br>
 <br>
 3.AC Analysis:<br>
 ![Image](https://github.com/user-attachments/assets/739c5487-95f4-4c60-87ff-0efd50545589)<br>
