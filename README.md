@@ -80,4 +80,5 @@ Gain(db)=-9.104db<br>
 1.There was a 180 degree phase shift between input and output in dc analysis <br>
 2.Width is directly proportional to drain current.<br>
 3.From AC analysis we get gain and frequency.<br>
-##
+## CIRCUIT DIAGRAM 2 :<br>
+
