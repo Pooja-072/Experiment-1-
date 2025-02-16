@@ -12,4 +12,33 @@ Resistor, n-mosfet, Voltage source(Power Supply), AC ground, Wires.<br>
 The Common source (CS) Amplifier is one of the most widely used configurations in anaglog electronics, known for its high voltage gain and effectivenesss in signal amplications.<br>
 It's functionality is assessed through three major evaluations:<br>
 ### ~ DC Analysis:
-Focuses on establishing the biasing condition for determining the Q point to ensure that the MOSFET is in active region.
+Focuses on establishing the biasing condition for determining the Q point to ensure that the MOSFET is in active region.<br>
+### ~ Transient Analysis:
+It evaluates time domain response, observing how the amplifier processes input signal over time <br>
+### ~ AC Analysis:
+It helps to understand how the amplifier handles small signals and different frequencies. It shows how much the signal is amplifoed (gain),the range of frequencies it can work with(bandwidth)), and how the signal shifts in timing (phase).
+<br>
+### Procedure:<br>
+1.Built the above circuit in the LT Spice <br>
+2.Set the supply voltage (Vdd) to 1.8V, the gate voltage (VG) to 0.9V, and a 1kohm resistor in the circuit.<br>
+3.Download and save the library file and LT splice file to a folder<br>
+4.Import the library file to LTspice file using spice directive .op<br>
+5.Change the nmos4 mosfet model name as CMOSN as in the library file with length 180nm and width 1um.<br>
+6.The given power rating is 100 micro watt. So find the current for this power rating.<br>
+7.Firstly conduct the DC Analysis of the circuit. For this vary the width of CMOSN to get the calculayed value as the result of the simulation as drain current is directly proportional to width of the transistor.<br>
+8.For Transient Analysis set the dc offset as 0.9V, amplitude 50mV, and frequency as 1kHz and keep the stop time for 3ms and run.<br>
+9.for AC Analysis set the sweep as decade , number of points per decade as 20, start frequency as 0.1Hz and stop frequency as 1T(Tera)Hz.<br>
+<br>
+### CALCULATION:<br>
+Given the power as 100uW ,we know that Vdd is 1.8V<br>
+from the formula P=VI<br>
+Id=P/V = 100u/1.8 = 55.5uA<br>
+Now,<br>
+from the loop equation : Vdd=IdRd + Vout<br>
+(where Id=55.5uA,Rd=1kohm,Vdd=1.8V)<br>
+Therefore,<br>
+Vout=1.745V<br>
+Hence the Q point = (Vout,Id) = (1.745V,55.5uA)<br>
+<br>
+### TABULAR COLUMN:<br>
+For the DC Analysis, to get the calculated value of Id , you need to vary the width and check for the corresponding Vout.
