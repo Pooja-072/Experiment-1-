@@ -60,3 +60,7 @@ from the above diagram,
 we got Id=55.5uA for width=0.203um and Vout=1.745V.<br>
 therefore the dc operting point is(1.745V,55.5uA)<br>
 2.Transient Analysis:<br>
+![Image](https://github.com/user-attachments/assets/f49f7252-c005-4211-bf09-b73caa773b0f)<br>
+we got vout = 1.745V for width = 0.203um and a phase shift of 180 degree.<br>
+3.AC Analysis:<br>
+
