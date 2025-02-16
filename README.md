@@ -25,9 +25,9 @@ It helps to understand how the amplifier handles small signals and different fre
 4.Import the library file to LTspice file using spice directive .op<br>
 5.Change the nmos4 mosfet model name as CMOSN as in the library file with length 180nm and width 1um.<br>
 6.The given power rating is 100 micro watt. So find the current for this power rating.<br>
-7.Firstly conduct the DC Analysis of the circuit. For this vary the width of CMOSN to get the calculayed value as the result of the simulation as drain current is directly proportional to width of the transistor.<br>
+7.Firstly conduct the DC Analysis of the circuit. For this vary the width of CMOSN to get the calculated value as the result of the simulation as drain current is directly proportional to width of the transistor.<br>
 8.For Transient Analysis set the dc offset as 0.9V, amplitude 50mV, and frequency as 1kHz and keep the stop time for 3ms and run.<br>
-9.for AC Analysis set the sweep as decade , number of points per decade as 20, start frequency as 0.1Hz and stop frequency as 1T(Tera)Hz.<br>
+9.For AC Analysis set the sweep as decade , number of points per decade as 20, start frequency as 0.1Hz and stop frequency as 1T(Tera)Hz.<br>
 <br>
 ### CALCULATION:<br>
 Given the power as 100uW ,we know that Vdd is 1.8V<br>
@@ -52,7 +52,7 @@ For the DC Analysis, to get the calculated value of Id , you need to vary the wi
 
 <br>
 
-### RESULT:<br>
+### SIMULATION RESULT:<br>
 1.DC Analysis :<br>
 ![Image](https://github.com/user-attachments/assets/790c17a8-1d4a-403c-9d04-5dbb265bfa63)
 <br>
@@ -81,4 +81,35 @@ Gain(db)=-9.104db<br>
 2.Width is directly proportional to drain current.<br>
 3.From AC analysis we get gain and frequency.<br>
 ## CIRCUIT DIAGRAM 2 :<br>
-
+![Image](https://github.com/user-attachments/assets/58a0291e-6700-47cd-8954-3add6af540a8)<br>
+<br>
+### COMPONENTS: <br>
+PMOSFET(180nm tachnology) , NMOSFET(180nm technology) , voltage supply,AC ground .<br>
+<br>
+### THEORY:<br>
+The Common source (CS) Amplifier is one of the most widely used configurations in anaglog electronics, known for its high voltage gain and effectivenesss in signal amplications.<br>
+It's functionality is assessed through three major evaluations:<br>
+### ~ DC Analysis:
+Focuses on establishing the biasing condition for determining the Q point to ensure that the MOSFET is in active region.<br>
+### ~ Transient Analysis:
+It evaluates time domain response, observing how the amplifier processes input signal over time <br>
+### ~ AC Analysis:
+It helps to understand how the amplifier handles small signals and different frequencies. It shows how much the signal is amplifoed (gain),the range of frequencies it can work with(bandwidth)), and how the signal shifts in timing (phase).
+<br>
+### PROCEDURE :<br>
+1. Build the above circuit using LTSPICE.<br>
+2. Download and save the library file and LT splice file to a folder<br>
+3. Import the library file to LTspice file using spice directive .op<br>
+4. Design a diode connected PMOSFET such that it always operates in saturation region.<br>
+5. Set the gate voltage of NMOSFET to 0.7V and maintain the supply voltage as 1.8V only.<br>
+6. Set the length and width of both the transistor as 180nm and 1um.<br>
+7. The given power rating is 100 micro watt. So find the current for this power rating.<br>
+8. Firstly conduct the DC Analysis of the circuit. For this vary the width of CMOSN to get the calculated value as the result of the simulation as drain current is directly proportional to width of the transistor.<br>
+9. For Transient Analysis set the dc offset as 0.9V, amplitude 50mV, and frequency as 1kHz and keep the stop time for 3ms and run.<br>
+10. For AC Analysis set the sweep as decade , number of points per decade as 20, start frequency as 0.1Hz and stop frequency as 1T(Tera)Hz.<br>
+<br>
+### SIMULATION RESULT :<br>
+1. DC Analysis:<br>
+Given the power as 100uW ,we know that Vdd is 1.8V<br>
+from the formula P=VI<br>
+Id=P/V = 100u/1.8 = 55.5uA<br>
