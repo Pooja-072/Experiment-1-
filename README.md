@@ -133,3 +133,5 @@ Therefore the dc operting point is(1.1V,55.5uA)<br>
 <br>
 2.Transient Analysis:<br>
 ![Image](https://github.com/user-attachments/assets/c257f3bd-a802-42b8-9038-6c1a748738a8)
+<br>
+![Image](https://github.com/user-attachments/assets/14325372-1755-431b-b934-3e41b636f839)
