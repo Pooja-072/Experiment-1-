@@ -54,4 +54,9 @@ For the DC Analysis, to get the calculated value of Id , you need to vary the wi
 
 ### RESULT:<br>
 1.DC Analysis :<br>
-
+![Image](https://github.com/user-attachments/assets/790c17a8-1d4a-403c-9d04-5dbb265bfa63)
+<br>
+from the above diagram,
+we got Id=55.5uA for width=0.203um and Vout=1.745V.<br>
+therefore the dc operting point is(1.745V,55.5uA)<br>
+2.Transient Analysis:<br>
