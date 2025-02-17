@@ -124,7 +124,7 @@ For the DC Analysis, to get the calculated value of Id , you need to vary the wi
 Given the power as 100uW ,we know that Vdd is 1.8V<br>
 from the formula P=VI<br>
 Id=P/V = 100u/1.8 = 55.5uA<br>
-![Image](https://github.com/user-attachments/assets/ef1b43bb-3405-4e15-813f-1837eebe0446)<br>
+
 <br>
 We got Id=55.5uA for width=2.02um and Vout=1.1V.<br>
 Vds=Vout=1.1V<br>
