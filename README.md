@@ -124,7 +124,7 @@ For the DC Analysis, to get the calculated value of Id , you need to vary the wi
 Given the power as 100uW ,we know that Vdd is 1.8V<br>
 from the formula P=VI<br>
 Id=P/V = 100u/1.8 = 55.5uA<br>
-
+![Image](https://github.com/user-attachments/assets/ef1b43bb-3405-4e15-813f-1837eebe0446)<br>
 We got Id=55.5uA for width=2.02um and Vout=1.1V.<br>
 Vds=Vout=1.1V<br>
 Vov = Vgs-Vth = Vin-Vth = 0.7-0.36= 0.36V<br>
@@ -135,3 +135,7 @@ Therefore the dc operting point is(1.1V,55.5uA)<br>
 ![Image](https://github.com/user-attachments/assets/c257f3bd-a802-42b8-9038-6c1a748738a8)
 <br>
 ![Image](https://github.com/user-attachments/assets/14325372-1755-431b-b934-3e41b636f839)
+<br>
+We got Vout=1.1V for width=2,02um and a phase shift of 180 degree.<br>
+Gain,Av = Vout/Vin = 1.1/0.7 = 1.57<br>
+3.AC Analysis:<br>
