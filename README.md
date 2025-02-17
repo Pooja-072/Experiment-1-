@@ -73,8 +73,8 @@ Gain,Av = Vout/Vin = 1.745/0.9 = 1.938<br>
 3.AC Analysis:<br>
 ![Image](https://github.com/user-attachments/assets/739c5487-95f4-4c60-87ff-0efd50545589)<br>
 <br>
-We got frequency = 210,45GHz<br>
-Gain(db)=-9.104db<br>
+We got frequency = 212.045GHz<br>
+Gain(db)=-9.132db<br>
 <br>
 ### INFERENCE:<br>
 1.There was a 180 degree phase shift between input and output in dc analysis <br>
@@ -139,3 +139,12 @@ Therefore the dc operting point is(1.1V,55.5uA)<br>
 We got Vout=1.1V for width=2,02um and a phase shift of 180 degree.<br>
 Gain,Av = Vout/Vin = 1.1/0.7 = 1.57<br>
 3.AC Analysis:<br>
+![Image](https://github.com/user-attachments/assets/cd8cd1ac-e9c6-497d-bcdc-be923bf70c31) <br>
+Gain(db)=-9.254db<br>
+<br>
+### INFERENCE :<br>
+1.Diode connected mosfet forces the mosfet to operate in saturation region.<br>
+2.There was a 180 degree phase shift in transient analysis.<br>
+3.Width is directly proportional to the drain current.<br>
+4.Transient analysis shows how mosfet behaves for time varying AC signal that is sine wave .<br>
+
