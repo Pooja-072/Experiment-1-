@@ -54,6 +54,7 @@ For the DC Analysis, to get the calculated value of Id , you need to vary the wi
 
 ### SIMULATION RESULT:<br>
 1.DC Analysis :<br>
+
 ![Image](https://github.com/user-attachments/assets/790c17a8-1d4a-403c-9d04-5dbb265bfa63)
 <br>
 <br>
@@ -65,6 +66,7 @@ where Vds>Vov. Mosfet lies in saturation region.<br>
 Therefore the dc operting point is(1.745V,55.5uA)<br>
 <br>
 2.Transient Analysis:<br>
+
 ![Image](https://github.com/user-attachments/assets/f49f7252-c005-4211-bf09-b73caa773b0f)<br>
 <br>
 we got vout = 1.745V for width = 0.203um and a phase shift of 180 degree.<br>
@@ -110,6 +112,7 @@ It helps to understand how the amplifier handles small signals and different fre
 <br>
 ### TABULAR COLUMN:<br>
 For the DC Analysis, to get the calculated value of Id , you need to vary the width and check for the corresponding Vout.<br>
+
 | Width  | Current | Vout  |
 |--------|---------|-------|
 | 1um    | 27uA    | 1.1V  |
@@ -124,6 +127,7 @@ For the DC Analysis, to get the calculated value of Id , you need to vary the wi
 Given the power as 100uW ,we know that Vdd is 1.8V<br>
 from the formula P=VI<br>
 Id=P/V = 100u/1.8 = 55.5uA<br>
+
 ![Image](https://github.com/user-attachments/assets/200c99f3-2b56-4565-b421-e363f40441d7)
 <br>
 We got Id=55.5uA for width=2.02um and Vout=1.1V.<br>
@@ -133,13 +137,16 @@ where Vds>Vov. Mosfet lies in saturation region.<br>
 Therefore the dc operting point is(1.1V,55.5uA)<br>
 <br>
 2.Transient Analysis:<br>
+
 ![Image](https://github.com/user-attachments/assets/c257f3bd-a802-42b8-9038-6c1a748738a8)
 <br>
+
 ![Image](https://github.com/user-attachments/assets/14325372-1755-431b-b934-3e41b636f839)
 <br>
 We got Vout=1.1V for width=2,02um and a phase shift of 180 degree.<br>
 Gain,Av = Vout/Vin = 1.1/0.7 = 1.57<br>
 3.AC Analysis:<br>
+
 ![Image](https://github.com/user-attachments/assets/cd8cd1ac-e9c6-497d-bcdc-be923bf70c31) <br>
 Gain(db)=-9.254db<br>
 <br>
