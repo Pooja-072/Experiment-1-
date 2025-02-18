@@ -147,7 +147,7 @@ We got Vout=1.1V for width=2,02um and a phase shift of 180 degree.<br>
 Gain,Av = Vout/Vin = 1.1/0.7 = 1.57<br>
 3.AC Analysis:<br>
 
-![Image](https://github.com/user-attachments/assets/cd8cd1ac-e9c6-497d-bcdc-be923bf70c31) <br>
+![Image](https://github.com/user-attachments/assets/b51250b9-2454-4366-94f0-68fd13ab2f77) <br>
 Gain(db)=-9.254db<br>
 <br>
 ### INFERENCE :<br>
