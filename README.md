@@ -73,7 +73,7 @@ we got vout = 1.745V for width = 0.203um and a phase shift of 180 degree.<br>
 Gain,Av = Vout/Vin = 1.745/0.9 = 1.938<br>
 <br>
 3.AC Analysis:<br>
-![Image](https://github.com/user-attachments/assets/b51250b9-2454-4366-94f0-68fd13ab2f77)<br>
+![Image](https://github.com/user-attachments/assets/3da50f01-cc37-426f-a633-309b1f9cc115)<br>
 <br>
 We got frequency = 212.045GHz<br>
 Gain(db)=-9.132db<br>
