@@ -158,17 +158,19 @@ Gain(db)=-9.254db<br>
 <br>
 ### Comparison Table <br>
 
-|Parameter      |Circuit diagram 1   |Circuit Diagram 2    |
-|---------------|--------------------|---------------------|
-|Circuit        |nMOS with resistor  |diode connected pmos |<br>
-|Length         |180nm               |180nm                |
-|Width          |0.203um             |2.02um               |
-|Aspect ratio   |0.12(low)           |11.2(high)           |
-|Supply voltage |1.8V                |1.8V                 |
-|Vin            |0.9V                | 0.7V                |
-|Power          |100uW               |100uW                |
-|Current        |55.5uA              |55.5uA               |
-|Vout           |1.74V               |1.1V                 |
-|Q point        |(1.74V,55.5uA)      |(1.1V,55.5uA)        |
-
-
+|Parameter                |Circuit diagram 1   |Circuit Diagram 2    |
+|-------------------------|--------------------|---------------------|
+|Circuit                  |nMOS with resistor  |diode connected pmos |
+|Length                   |180nm               |180nm                |
+|Width                    |0.203um             |2.02um               |
+|Aspect ratio             |0.12(low)           |11.2(high)           |
+|Supply voltage           |1.8V                |1.8V                 |
+|Vin                      |0.9V                | 0.7V                |
+|Power                    |100uW               |100uW                |
+|Current                  |55.5uA              |55.5uA               |
+|Vout                     |1.74V               |1.1V                 |
+|Q point                  |(1.74V,55.5uA)      |(1.1V,55.5uA)        |
+|Rd                       |1kohm               |-                    |
+|Phase Shift              | 180 degree         | 180 degree          |
+|Gain                     |                    |                     |
+|Highest cutoff frequency |
