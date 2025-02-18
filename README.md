@@ -157,6 +157,7 @@ Gain(db)=-9.254db<br>
 4.Transient analysis shows how mosfet behaves for time varying AC signal that is sine wave .<br>
 <br>
 ### Comparison Table <br>
+
 |Parameter     |Circuit diagram 1   |Circuit Diagram 2    |<br>
 |--------------|--------------------|---------------------|<br>
 |Circuit       |nMOS with resistor  |diode connected pmos |<br>
