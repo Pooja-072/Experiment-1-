@@ -155,4 +155,16 @@ Gain(db)=-9.254db<br>
 2.There was a 180 degree phase shift in transient analysis.<br>
 3.Width is directly proportional to the drain current.<br>
 4.Transient analysis shows how mosfet behaves for time varying AC signal that is sine wave .<br>
+<br>
+### Comparison Table <br>
+|Parameter     |Circuit diagram 1   |Circuit Diagram 2    |<br>
+|--------------|--------------------|---------------------|<br>
+|Circuit       |nMOS with resistor  |diode connected pmos |<br>
+|Length        |180nm               |180nm                |<br>
+|Width         |0.203um             |2.02um               |<br>
+|Aspect ratio  |0.12(low)           |11.2(high)           |<br>
+|Supply voltage|1.8V                |1.8V                 |<br>
+|Vin           |0.9V                | 0.7V                |<btr>
+|Power         |100uW               |100uW                |<br>
+|
 
