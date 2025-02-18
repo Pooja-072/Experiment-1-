@@ -75,8 +75,9 @@ Gain,Av = Vout/Vin = 1.745/0.9 = 1.938<br>
 3.AC Analysis:<br>
 ![Image](https://github.com/user-attachments/assets/3da50f01-cc37-426f-a633-309b1f9cc115)<br>
 <br>
-We got frequency = 212.045GHz<br>
-Gain(db)=-9.132db<br>
+we got Gain(in dB) = 2.27dB
+-3dB= 2.27dB-3dB = -0.733dB
+highest cutoff frequency= 36.60GHz
 <br>
 ### INFERENCE:<br>
 1.There was a 180 degree phase shift between input and output in dc analysis <br>
@@ -122,7 +123,7 @@ For the DC Analysis, to get the calculated value of Id , you need to vary the wi
 | 2um    | 54.5uA  | 1.1V  |
 |2.02um  | 55.5um  | 1.1V  |
 <br>
-### SIMULATION RESULT :<br>
+### SIMULATION RESULT: <br>
 1. DC Analysis:<br>
 Given the power as 100uW ,we know that Vdd is 1.8V<br>
 from the formula P=VI<br>
@@ -148,9 +149,11 @@ Gain,Av = Vout/Vin = 1.1/0.7 = 1.57<br>
 3.AC Analysis:<br>
 
 ![Image](https://github.com/user-attachments/assets/b51250b9-2454-4366-94f0-68fd13ab2f77) <br>
-Gain(db)=-9.254db<br>
 <br>
-### INFERENCE :<br>
+we got Gain(dB) = 5.53dB<br>
+-3dB = 5.53dB-3dB = 2.53dB<br>
+highest cutoff frequency=17.98GHz<br>
+### INFERENCE: <br>
 1.Diode connected mosfet forces the mosfet to operate in saturation region.<br>
 2.There was a 180 degree phase shift in transient analysis.<br>
 3.Width is directly proportional to the drain current.<br>
@@ -172,5 +175,5 @@ Gain(db)=-9.254db<br>
 |Q point                  |(1.74V,55.5uA)      |(1.1V,55.5uA)        |
 |Rd                       |1kohm               |-                    |
 |Phase Shift              | 180 degree         | 180 degree          |
-|Gain                     |                    |                     |
-|Highest cutoff frequency |
+|Gain                     |  2.27dB            |  5.54dB             |
+|Highest cutoff frequency | 36.60GHz           | 17.92GHz            |
