@@ -158,8 +158,8 @@ Gain(db)=-9.254db<br>
 <br>
 ### Comparison Table <br>
 
-|Parameter      |Circuit diagram 1   |Circuit Diagram 2    |<br>
-|---------------|--------------------|---------------------|<br>
+|Parameter      |Circuit diagram 1   |Circuit Diagram 2    |
+|---------------|--------------------|---------------------|
 |Circuit        |nMOS with resistor  |diode connected pmos |<br>
 |Length         |180nm               |180nm                |
 |Width          |0.203um             |2.02um               |
@@ -167,5 +167,8 @@ Gain(db)=-9.254db<br>
 |Supply voltage |1.8V                |1.8V                 |
 |Vin            |0.9V                | 0.7V                |
 |Power          |100uW               |100uW                |
-|
+|Current        |55.5uA              |55.5uA               |
+|Vout           |1.74V               |1.1V                 |
+|Q point        |(1.74V,55.5uA)      |(1.1V,55.5uA)        |
+
 
