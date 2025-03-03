@@ -132,11 +132,13 @@ from this , the transistor to operate in saturation region ,<br>
 Vgs>Vth, <br>
 Vds> Vov <br>
 From observation our Vgs= 0.801V , Vth= 0.495V and Vds = 0.904V . <br>
-as 0.801 > 0.495 our Vgs > Vth <br> and 
-as 0.904 > (0.801-0.495) i.e Vds > Vov <br>
+as,
+##### 0.801 > 0.495 our Vgs > Vth <br>
+as,
+##### 0.904 > (0.801-0.495) i.e Vds > Vov <br>
 The transistors lie in saturation region .<br>
 ##### Theoretical values and observed values of parameters :<br>
-<br>
+
 | Parameter    | Theoretical value  | Practical value |
 |--------------|--------------------|-----------------|
 |Voutcm        | 1.40V              | 1.403V          |
@@ -146,4 +148,107 @@ The transistors lie in saturation region .<br>
 |Rd            | 1.8kohm            | 1.83kohm        |
 |Rss           | 416.2ohm           | 416ohm          |
 |Vgs           | 0.8V               | 0.801V          |
+
 <br>
+therefore Q point = (Vds,Id) = (0.904V,0.6mA).<br>
+Now lets caluculate vincm(min), Vincm(max), Vout(min), Vout(max) .<br>
+
+##### Vincm(min)= Vth + Vp = 0.36 + 0.5 = 0.86V <br>
+##### Vincm(max) = Vdd - (Id*Rd) + Vth = 1.762V <br>
+##### Vout(min) = Vov1 + Vov3 = (0.8-0.36)+0.5 = 0.94V <br>
+##### Vout(max) = Vdd-(Id*Rd) = 1.402V <br>
+<br>
+
+## Transient Analysis :
+* Replace DC input with an AC signal.<br>
+* Use SINE(dc_offset, Amplitude, Frequency).
+* Go to "Simulate" > "Edit Simulation Cmd" > "Transient".<br>
+* Set Stop Time: 5ms.<br>
+* Run the simulation.<br>
+##### I will apply 2 different amplitudes and vary Vcm to see the input and output swing and to check whether circuit act as a linear amplifier within the range .<br>
+### For Amplitude = 50mV :
+#### * When Vincm = 0.5V:
+
+![0 5 vout](https://github.com/user-attachments/assets/f4415b87-6a06-4239-a734-30c681e5167d)
+
+check the SPICE ERROR log,<br>
+Vgs = 0.480V , Vth = 0.485V . <br>
+as 
+###### Vgs<=Vth 
+The transitor is in off state , therefore you are observing distortion or the clipping off of the output circuit . <br>
+
+#### * When Vincm = 0.55V :
+
+![0 55Vout 50m](https://github.com/user-attachments/assets/5f4e4803-220d-48a6-93dd-3d50e3541e43)
+
+check the SPICE ERROR log,<br>
+Vgs = 0.513 V , Vth = 0.485V and Vds = 2.38V. <br>
+as Vgs>Vth and Vds> Vov , the transitor is in saturation region <br>
+Vincmp-p = 600mV + 500mV = 1.1V<br>
+Voutp-p = 2.3+2.4 = 4.8V Which is too high . This happens because Id and Iss and fully varying <br>
+
+#### * When Vincm = 1.31V :
+
+![1 31 vout](https://github.com/user-attachments/assets/1fa65df0-bfff-4cb9-a735-b5fdbbf2f181)
+
+Vinp-p = 1.36V+ 1.26V = 2.62V<br>
+Voutp-p = 1.16V + 1.60V = 2.76V <br>
+From theoretical value wkt Vout(max)p-p = 2.80V <br>
+So in this input volatge we are getting the maximum output swing.<br>
+
+#### * When Vout >=1.7V<br>
+
+![1 76vout](https://github.com/user-attachments/assets/521bbc5b-0f00-43cc-800d-14553b9b610a)
+
+The transistor enters the triode region as Vds<Vov <br>
+therefore the waveform is distorted .<br> 
+
+### For Amplitude = 100mV :
+#### * When Vincm < 0.5V <br>
+in this case if Vincm < 0.5V the transitor enters cutoff region as there will no sufficient Vgs .<br>
+#### * When Vincm = 1.31V <br>
+
+![1 31Vout 100mv](https://github.com/user-attachments/assets/390387c4-6f4d-4388-9671-bc3ddb72ea44)
+
+In this case Vincmp-p = 2.62V and Voutp-p = 0.95V + 1.82V <br>
+From theoretical value wkt Vout(max)p-p = 2.80V <br>
+So in this input volatge we are getting the maximum output swing.<br>
+
+#### * When Vincm < 1.55V <br>
+
+![1 76vout 100mv](https://github.com/user-attachments/assets/28137843-0ab2-4915-96db-8beab1901e6b)
+
+The transistor enters the triode region as Vds<Vov <br>
+therefore the waveform is distorted .<br> 
+#### FOR 50mV AMPLITUDE :
+|Parameter      |Theory value  | Practical value |
+|---------------|--------------|-----------------|
+|Vincm(min)     | 0.86V        | 0.55V           |
+|Vincm(max)     | 1.76V        | 1.66V           |
+
+#### FOR 100mV AMPLITUDE :
+|Parameter      |Theory value  | Practical value |
+|---------------|--------------|-----------------|
+|Vincm(min)     | 0.86V        | 0.5V            |
+|Vincm(max)     | 1.76V        | 1.55V           |
+
+##### So I conclude that, Larger Amplitude Causes Early Distortion i.e at higher ampltitude transistor reaches saturation or cutoff earlier , limiting the range of valid Vincm.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
