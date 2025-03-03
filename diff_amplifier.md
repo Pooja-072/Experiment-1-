@@ -28,4 +28,19 @@ Therefore,
 #### Vocm >= Vincm - Vtn
 from this we can conclude that Vincm = Vocm -Vtn
 Now,
-The total current flowing through the circuit is Iss , current flowing t
+The total current flowing through the circuit is Iss , current flowing through the transistors are Id1 and Id2 <br>
+Also, from observation <br>
+Id2=Id2 = Iss/2 (both Id1 and Id2 together constitute for the total current )<br>
+Vincm = Vgs + Vp<br>
+
+#### Vp = Vincm - Vgs<br>
+now, for saturation region the current equation is <br>
+Id1=Id2= (1/2)UnCox(w/L)Vov)^2 <br>
+where Vov = [ (I)/(Kn'W/L) ]^1/2 <br>
+therefore,<br>
+#### Vgs= [(2)^1/2 * Vov ] + Vtn <br>
+Now Coming to the output equations ,<br>
+#### Vo1=Vo2 = Vdd - Id*Rd = Vd1 = Vd2<br>
+when,<br>
+Vd1
+
