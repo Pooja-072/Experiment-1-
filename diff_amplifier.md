@@ -234,11 +234,25 @@ therefore the waveform is distorted .<br>
 
 ##### So I conclude that, Larger Amplitude Causes Early Distortion i.e at higher ampltitude transistor reaches saturation or cutoff earlier , limiting the range of valid Vincm.<br>
 
+## AC Analysis : <br>
 
+For this we priorly need to calculate gain with theoretical values . <br>
+gain = Av= -gm*Rd 
+where gm= (2Id)/Vov = 2.72mS <br>
+Av= -2.72m * 1.83k = -4.97 V/V <br>
+as we know Av= 20Log(vout/Vin)<br>
+in dB scale theoretical gain is 13.92dB <br>
 
+![ac ckt 1](https://github.com/user-attachments/assets/ef893833-9bdc-45a6-9ab3-146f714227b4)
 
-
-
+from this , practically we are getting 13.01dB gain <br>
+which is equal to , Av= 10^(13.01/20) = 4.47V <br>
+Bandwidth = 2.5GHz <br>
+3db Bandwidth = 13GHz <br>
+|Parameter      |Theory value  | Practical value |
+|---------------|--------------|-----------------|
+|Av(in dB)      | 13.92dB      | 13.01dB         |
+|Av(in V/V)     | 4.97         | 4.47            |
 
 
 
