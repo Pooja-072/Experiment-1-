@@ -111,7 +111,22 @@ Gain of the ciruit , Av = gm*Rd <br>
 
 ## CIRCUIT 1 : Resistor-Loaded Differential Pair:<br>
 
-![circuit photo](https://github.com/user-attachments/assets/cee8828f-6e3f-4809-bf2f-60cbdd5fb49a)
+![main ckt dia](https://github.com/user-attachments/assets/f0b9e016-f72c-4d49-8da6-2fba5da1458a)
+<br>
+### DC Analysis :
+* Make the necessary connections as per the circuit daigram .<br>
+* Set the Rd and Rss values such that the transistors will operate in saturation region .<br>
+* Vary W/L to get the required Voutcm.<br>
+* Vary Rd to set exact Voutcm.<br>
+* Go to "Simulate" > "Edit Simulation Cmd" > "DC op pnt".<br>
+
+![ckt1 dc](https://github.com/user-attachments/assets/5e41a430-1671-4fd4-9c8f-fd0f14bce4d6)
+<br>
+* After this in "view " command goto " SPICE errorlog " option to check Vgs, Vth ,Vds etc.<br>
+
+![main error log](https://github.com/user-attachments/assets/2ed58d43-a436-4634-b202-0945d58ab601)
+<br>
+
 
 
 
