@@ -331,7 +331,7 @@ Bandwidth = 6 GHz <br>
 |Av(in V/V)     | 4.97         | 4.73            |
 
 -----------------------------------------------------------------------------------------------
-## CIRCUIT 1 :  Simple Current Source Differential Pair:<br>
+## CIRCUIT 3 :  Simple Current Source Differential Pair:<br>
 
 ![image](https://github.com/user-attachments/assets/d64dfbba-89d3-4b66-935c-7743e1f5e67f)
 
@@ -410,6 +410,30 @@ The transistor enters the triode region as Vds<Vov <br>
 |Vincm(min)     | 0.86V        | 0.7V            |
 |Vincm(max)     | 1.76V        | 2V              |
 
+##### So I conclude that, Larger Amplitude Causes Early Distortion i.e at higher ampltitude transistor reaches saturation or cutoff earlier , limiting the range of valid Vincm.<br>
 
+### AC Analysis:<br>
+For this we priorly need to calculate gain with theoretical values . <br>
+gain = Av= -gm*Rd 
+where gm= (2Id)/Vov = 2.72mS <br>
+Av= -2.72m * 1.83k = -4.97 V/V <br>
+as we know Av= 20Log(vout/Vin)<br>
+in dB scale theoretical gain is 13.92dB <br>
 
- 
+![image](https://github.com/user-attachments/assets/e9b5b6f4-a4b2-42e2-8c27-5cf8c5f69ed1)
+
+from this , practically we are getting 20dB gain <br>
+which is equal to , Av= 10^(13.5/20) = 10V/V<br>
+Bandwidth = 1.13 GHz <br>
+3db Bandwidth = 4.10 GHz <br>
+|Parameter      |Theory value  | Practical value |
+|---------------|--------------|-----------------|
+|Av(in dB)      | 13.92dB      | 20 dB           |
+|Av(in V/V)     | 4.97         | 10              |
+
+##### When a resistor (RSS) is used, the small-signal resistance is just Rss.But when a MOSFET is used as a current source, it has a much higher small-signal resistance ro (output resistance of MOSFET).Higher resistance at the source improves gain.
+
+-----------------------------------------------------------------------------------------------
+
+## CIRCUIT 4 : Active Load Differential Pair (MOSFET as Load):<br>
+
