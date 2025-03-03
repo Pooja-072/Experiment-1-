@@ -108,6 +108,8 @@ Gain of the ciruit , Av = gm*Rd <br>
 ![design exp2](https://github.com/user-attachments/assets/24082c73-ece2-44a0-8eff-612c9c939a55)
 <br>
 ##### Now lets perform all the 4 types of ciruit's analysis step by step ;<br>
+-----------------------------------------------------------------------------------------------
+
 
 ## CIRCUIT 1 : Resistor-Loaded Differential Pair:<br>
 
@@ -126,7 +128,22 @@ Gain of the ciruit , Av = gm*Rd <br>
 
 ![main error log](https://github.com/user-attachments/assets/2ed58d43-a436-4634-b202-0945d58ab601)
 <br>
-
-
-
-
+from this , the transistor to operate in saturation region ,<br>
+Vgs>Vth, <br>
+Vds> Vov <br>
+From observation our Vgs= 0.801V , Vth= 0.495V and Vds = 0.904V . <br>
+as 0.801 > 0.495 our Vgs > Vth <br> and 
+as 0.904 > (0.801-0.495) i.e Vds > Vov <br>
+The transistors lie in saturation region .<br>
+##### Theoretical values and observed values of parameters :<br>
+<br>
+| Parameter    | Theoretical value  | Practical value |
+|--------------|--------------------|-----------------|
+|Voutcm        | 1.40V              | 1.403V          |
+|Vp            | 0.5V               | 0.49V           |
+|Id1,Id2       | 0.6mA              | 0.59mA          |
+|Id(R3)        | 1.2mA              | 1.19mA          |
+|Rd            | 1.8kohm            | 1.83kohm        |
+|Rss           | 416.2ohm           | 416ohm          |
+|Vgs           | 0.8V               | 0.801V          |
+<br>
