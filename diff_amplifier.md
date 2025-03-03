@@ -103,6 +103,15 @@ Gain of the ciruit , Av = gm*Rd <br>
 
 ## DESIGN QUESTION :<br>
 
+### Design differential amplifie for following specifications Vdd=2.5V, P≤3mW, Vicm = 1.3V, Vocm = 1.4V, Vp = 0.5V. Perform DC analysis, transient analysis & frequency response and extract the required parameters.
+
+![design exp2](https://github.com/user-attachments/assets/24082c73-ece2-44a0-8eff-612c9c939a55)
+<br>
+##### Now lets perform all the 4 types of ciruit's analysis step by step ;<br>
+
+## CIRCUIT 1 : Resistor-Loaded Differential Pair:<br>
+
+![circuit photo](https://github.com/user-attachments/assets/cee8828f-6e3f-4809-bf2f-60cbdd5fb49a)
 
 
 
