@@ -247,7 +247,7 @@ in dB scale theoretical gain is 13.92dB <br>
 
 from this , practically we are getting 13.01dB gain <br>
 which is equal to , Av= 10^(13.01/20) = 4.47V <br>
-Bandwidth = 2.5GHz <br>
+Bandwidth = 10GHz <br>
 3db Bandwidth = 13GHz <br>
 |Parameter      |Theory value  | Practical value |
 |---------------|--------------|-----------------|
@@ -386,7 +386,7 @@ The transistor enters the triode region as Vds<Vov <br>
 
 The transitor is in off state , therefore you are observing distortion or the clipping off of the output circuit . <br>
 
- #### When Vincm = 1.3 V <br>
+ #### * When Vincm = 1.3 V <br>
 
 ![1 3vout 100mv](https://github.com/user-attachments/assets/aa7f901c-4a24-4101-b278-c5bd7acf044b)
 
@@ -395,14 +395,14 @@ Vout p-p = 1.0 + 1.78 = 2.78V<br>
 From theoretical value wkt Vout(max)p-p = 2.80V <br>
 So in this input volatge we are getting the maximum output swing.<br>
 
-#### When Vincm > 2V :<br>
+#### * When Vincm > 2V :<br>
 The transistor enters the triode region as Vds<Vov <br>
 
 #### FOR 50mV AMPLITUDE :
 |Parameter      |Theory value  | Practical value |
 |---------------|--------------|-----------------|
 |Vincm(min)     | 0.86V        | 0.66V           |
-|Vincm(max)     | 1.76V        | 2,50V           |
+|Vincm(max)     | 1.76V        | 2.50V           |
 
 #### FOR 100mV AMPLITUDE :
 |Parameter      |Theory value  | Practical value |
@@ -423,7 +423,7 @@ in dB scale theoretical gain is 13.92dB <br>
 ![image](https://github.com/user-attachments/assets/e9b5b6f4-a4b2-42e2-8c27-5cf8c5f69ed1)
 
 from this , practically we are getting 20dB gain <br>
-which is equal to , Av= 10^(13.5/20) = 10V/V<br>
+which is equal to , Av= 10^(20/20) = 10V/V<br>
 Bandwidth = 1.13 GHz <br>
 3db Bandwidth = 4.10 GHz <br>
 |Parameter      |Theory value  | Practical value |
@@ -436,4 +436,85 @@ Bandwidth = 1.13 GHz <br>
 -----------------------------------------------------------------------------------------------
 
 ## CIRCUIT 4 : Active Load Differential Pair (MOSFET as Load):<br>
+
+![image](https://github.com/user-attachments/assets/5ee01b83-488e-4b6b-9f0f-d05f97926040)
+
+### DC Analysis :<br>
+
+![dc ](https://github.com/user-attachments/assets/c8a77ffe-45e5-4230-a09a-4b300e6f1577)
+
+### Transient Analysis <br>
+#### For Amplitude = 50mV :
+#### * When 0< Vincm < 0.7V <br>
+
+![0 2vout 50mv](https://github.com/user-attachments/assets/6a11c56e-8ac7-4b8d-a6fe-39c572f51edb)
+
+The transitor is in off state , therefore you are observing distortion or the clipping off of the output circuit . <br>
+
+ #### * When Vincm = 1.4 V <br>
+
+![1 4vout](https://github.com/user-attachments/assets/f02bab46-c705-4107-9c9e-dbfd716467b6)
+
+Vincmp-p = 2.8V <br>
+Vout p-p = 1.0 + 1.78 = 2.86V<br>
+From theoretical value wkt Vout(max)p-p = 2.80V <br>
+So in this input volatge we are getting the maximum output swing.<br>
+
+#### * When Vincm > 1.96V :<br>
+
+![2vout](https://github.com/user-attachments/assets/9085af84-62ef-45d6-a1ae-5a2126ee5f12)
+
+The transistor enters the triode region as Vds<Vov <br>
+
+#### FOR 50mV AMPLITUDE :
+|Parameter      |Theory value  | Practical value |
+|---------------|--------------|-----------------|
+|Vincm(min)     | 0.86V        | 0.4V            |
+|Vincm(max)     | 1.76V        | 1.96V           |
+
+## AC Analysis :<br>
+
+![ac](https://github.com/user-attachments/assets/c3b5165a-6893-4904-a920-fa11ce2bd903)
+
+from this , practically we are getting 15dB gain <br>
+which is equal to , Av= 10^(15/20) = 5.5V/V<br>
+Bandwidth = 1.01 GHz <br>
+3db Bandwidth = 6.10 GHz <br>
+|Parameter      |Theory value  | Practical value |
+|---------------|--------------|-----------------|
+|Av(in dB)      | 13.92dB      | 15 dB           |
+|Av(in V/V)     | 4.97         | 5.5             |
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## RESULT :
+|FEATURE           |RESISTOR LOADED         |CURRENT SOURCE LOAD      |CURRRENT SOURCE REPLACE|
+|                  |DIFFERNTIAL AMPLIFIER   |DIFFERNTIAL AMPLIFIER    |BY NMOS                |
+|------------------|------------------------|-------------------------|-----------------------|
+|Load Component    |Resistor Rss            |Ideal Current Source Iss |NMOS Transistor        |
+|Gain              |low(4.47)               | higher (4.73)           |very high(10 )         |
+|Output Swing      |Limited due to Rd       |Higher than resistor     |Highest output swing   |
+|                  |voltage drop(2.5V)      |load  (2.8Vpp)           |    (2.86Vpp)          |
+|Bandwidth         |Highest(10GHz)          |Lower(6GHz)              |lowest BW (1.5GHz)     |
+|Vincm Range       |limited by Rss,Rd       |higher                   |highest                |
+|Voutcm Control    |Poor                    |Better control using     |Best control using     |
+|                  |                        | current source          |nmos active load       |
+| W/L              |7.599u/180n             |7.599u/180n              |35.44u/180n            |
+
+-----------------------------------------------------------------------------------------------
+
+## INFERENCE :<br>
+
+* Larger Rss makes it harder for the transistors to amplify small signals, leading to reduced gain.<br>
+* Vincm must be within the range that keeps both input transistors ON and in saturation.Since Rss allows variations in current as it doesn't produce constant current we replace resistor with constant current source which provides stable output and gain.<br>
+* Larger Amplitude Causes Early Distortion i.e at higher ampltitude transistor reaches saturation or cutoff earlier , limiting the range of valid Vincm.(example done for both 50mV and 100mV amplitude)<br>
+* Maximum input swing is the largest input voltage before distortion starts.<br>
+* Until i kept the W/L ratio of 3 transistors in 3rd ciruit there was a zero Vth , then Vth got updated .<br>
+* When I replaced all things by mosfet , was not able to get the required output , later after managing W/L Vout was set . As there no parameters that Vout actually depends on we may not be able to vary Vout, so there was little difference in the gain. <br>
+* When we set Ac phase as 180 for one of the input there was a high gain.<br>
+
+ 
+
+
+
+
 
