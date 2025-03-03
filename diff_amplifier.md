@@ -56,12 +56,9 @@ to get the maximum input and output swing get the average of maximum and minumum
 Gain of the ciruit , Av = gm*Rd <br>
 <br>
 where , 
-##### Vp = 
-Voltage at the source node of input transistors (set by tail current)<br>
-##### Vth =
-Threshold voltage of MOSFETs<br>
-##### Vdd=
-Supply voltage<br>
+##### Vp = Voltage at the source node of input transistors (set by tail current)<br>
+##### Vth =Threshold voltage of MOSFETs<br>
+##### Vdd=Supply voltage<br>
 
 ## ROLE OF THE COMPONENTS : <br>
 ##### Rss (Source Resistance):<br>
@@ -85,6 +82,26 @@ Supply voltage<br>
 <br>
 
 ## FOUR TYPES OF DIFFERENTIAL PAIR AMPLIFIER: <br>
+#### Resistor-Loaded Differential Pair: <br>
+*Uses resistors as the drain load.<br>
+*Simple design but has low gain due to large  requirements.<br>
+*Limited common-mode rejection and output swing.<br>
+
+#### Current Source-Loaded Differential Pair:<br>
+* Replaces Rss with Ideal current source.<br>
+* Improves gain.<br>
+
+#### Simple Current Source Differential Pair:<br>
+* Uses a single MOSFET as a current source.<br>
+* Gain increases still.<br>
+
+#### Active Load Differential Pair (MOSFET as Load):<br>
+* Both Iss and Rd are replaced with a mosfet .<br>
+* Gain is too high.<br>
+-----------------------------------------------------------------------------------------------
+
+
+
 
 
 
