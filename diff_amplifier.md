@@ -42,5 +42,6 @@ therefore,<br>
 Now Coming to the output equations ,<br>
 #### Vo1=Vo2 = Vdd - Id*Rd = Vd1 = Vd2<br>
 when,<br>
-Vd1
+Vd1- Vd2 = 0 it implies Vin1=Vin2 , which is ultimately known as common mode.<br>
+
 
