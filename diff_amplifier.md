@@ -1,7 +1,7 @@
 # THE MOS DIFFERENTIAL PAIR AMPLIFIER <br>
 <br>
-* A differntial pair amplifier is a circuit that amplifies the difference between two input signal while rejecting the common mode noise .<br>
-* It is widely used in analog ciruits, operational amplifiers, and communivation system .<br>
+* A differential pair amplifier is a circuit that amplifies the difference between two input signal while rejecting the common mode noise .<br>
+* It is widely used in analog ciruits, operational amplifiers, and communication system .<br>
 <br>
 
 ## WORKING PRINCIPLE OF DIFFERENTIAL PAIR AMPLIFIER :<br>
@@ -52,13 +52,12 @@ also output max and min are<br>
 where Vov3 = Vp <br>
 #### Vout(max)= Vdd-(Id*Rd)<br>
 to get the maximum input and output swing get the average of maximum and minumum inputs and outputs .<br>
-
-Gain of the ciruit , Av = gm*Rd <br>
-<br>
 where , 
 ##### Vp = Voltage at the source node of input transistors (set by tail current)<br>
 ##### Vth =Threshold voltage of MOSFETs<br>
 ##### Vdd=Supply voltage<br>
+and also ,<br>
+Gain of the ciruit , Av = gm*Rd <br>
 
 ## ROLE OF THE COMPONENTS : <br>
 ##### Rss (Source Resistance):<br>
