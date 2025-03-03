@@ -486,9 +486,11 @@ Bandwidth = 1.01 GHz <br>
 |Av(in V/V)     | 4.97         | 5.5             |
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## RESULT :
-|FEATURE           |RESISTOR LOADED         |CURRENT SOURCE LOAD      |CURRRENT SOURCE REPLACE|
-|                  |DIFFERNTIAL AMPLIFIER   |DIFFERNTIAL AMPLIFIER    |BY NMOS                |
+## RESULT :<br>
+<br>
+
+
+|Features          |Circuit 1               |Circuit 2                |circuit 3              |
 |------------------|------------------------|-------------------------|-----------------------|
 |Load Component    |Resistor Rss            |Ideal Current Source Iss |NMOS Transistor        |
 |Gain              |low(4.47)               | higher (4.73)           |very high(10 )         |
