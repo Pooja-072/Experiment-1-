@@ -24,3 +24,8 @@ where,
 from the picture you may observe ,<br>
 Vg=Vincm and Vd=Vocm <br>
 Therefore,
+
+#### Vocm >= Vincm - Vtn
+from this we can conclude that Vincm = Vocm -Vtn
+Now,
+The total current flowing through the circuit is Iss , current flowing t
