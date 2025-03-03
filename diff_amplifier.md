@@ -24,7 +24,6 @@ where,
 from the picture you may observe ,<br>
 Vg=Vincm and Vd=Vocm <br>
 Therefore,
-
 #### Vocm >= Vincm - Vtn
 from this we can conclude that Vincm = Vocm -Vtn
 Now,
@@ -43,5 +42,49 @@ Now Coming to the output equations ,<br>
 #### Vo1=Vo2 = Vdd - Id*Rd = Vd1 = Vd2<br>
 when,<br>
 Vd1- Vd2 = 0 it implies Vin1=Vin2 , which is ultimately known as common mode.<br>
+Now lets find in what range the amplifier works as linear amplifier <br>
+for that,<br>
+#### Vincm(min) = Vth +Vov3 <br>
+where Vov3=Vp<br>
+#### Vincm(max) = Vdd- (Id*Rd) + Vth <br>
+also output max and min are<br>
+#### Vout(min)= Vov1+Vov3 <br>
+where Vov3 = Vp <br>
+#### Vout(max)= Vdd-(Id*Rd)<br>
+to get the maximum input and output swing get the average of maximum and minumum inputs and outputs .<br>
+
+Gain of the ciruit , Av = gm*Rd <br>
+<br>
+where , 
+##### Vp = 
+Voltage at the source node of input transistors (set by tail current)<br>
+##### Vth =
+Threshold voltage of MOSFETs<br>
+##### Vdd=
+Supply voltage<br>
+
+## ROLE OF THE COMPONENTS : <br>
+##### Rss (Source Resistance):<br>
+* Stabilizes biasing .<br>
+* Provides negative feedback <br>
+* As Rss introduces negative feedback , it affects the transconductance (gm), and overall gain (Av) of amplifier .<br>
+
+##### Rd (Drain Resistance):<br>
+* Converts current variation into an output voltage.<br>
+* Higher Rd the gain increases but limits the output swing <br>
+
+##### Id (Drain Current of each Transistor):<br>
+* Defines the transistor's operating region and determines transconductance (gm).<br>
+* Higher Id increases the gm , which increases the gain . <br>
+* Id must be chosen carefully to keep transistors in saturation for proper amplification.<br>
+
+##### Iss (Tail current ):<br>
+* Provides a stable constant current to the differential pair.<br>
+* Increasing Iss can increase the gm which increases gain.<br>
+* Too much Iss can reduce the available voltage swing also.<br>
+<br>
+
+## FOUR TYPES OF DIFFERENTIAL PAIR AMPLIFIER: <br>
+
 
 
