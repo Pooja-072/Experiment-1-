@@ -13,12 +13,13 @@
 
 Now assuming both the transistors are identical (m1,m2)<br>
 drain resistors, Rd1 = Rd2 = Rd <br>
-also Vin1= Vin2= Vincm <br>
-    Vincm= Vgs + Vp <br>
+also,<br>
+##### Vin1= Vin2= Vincm <br>
+##### Vincm= Vgs + Vp <br>
 The transistor to work in saturation region,<br>
     Vds >= Vov <br>
     Vds >= Vgs-Vtn <br>
-    Vd-Vs >= Vg-Vs-Vtn <br>
+##### Vd-Vs >= Vg-Vs-Vtn <br>
 where,
 ##### Vd >= Vg-Vtn<br>
 from the picture you may observe ,<br>
@@ -28,6 +29,7 @@ Therefore,
 from this we can conclude that Vincm = Vocm -Vtn
 Now,
 The total current flowing through the circuit is Iss , current flowing through the transistors are Id1 and Id2 <br>
+
 Also, from observation <br>
 Id2=Id2 = Iss/2 (both Id1 and Id2 together constitute for the total current )<br>
 Vincm = Vgs + Vp<br>
