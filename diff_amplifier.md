@@ -159,7 +159,7 @@ Now lets caluculate vincm(min), Vincm(max), Vout(min), Vout(max) .<br>
 ##### Vout(max) = Vdd-(Id*Rd) = 1.402V <br>
 <br>
 
-## Transient Analysis :
+### Transient Analysis :
 * Replace DC input with an AC signal.<br>
 * Use SINE(dc_offset, Amplitude, Frequency).
 * Go to "Simulate" > "Edit Simulation Cmd" > "Transient".<br>
@@ -205,7 +205,7 @@ therefore the waveform is distorted .<br>
 
 ### For Amplitude = 100mV :
 #### * When Vincm < 0.5V <br>
-in this case if Vincm < 0.5V the transitor enters cutoff region as there will no sufficient Vgs .<br>
+In this case if Vincm < 0.5V the transitor enters cutoff region as there will no sufficient Vgs .<br>
 #### * When Vincm = 1.31V <br>
 
 ![1 31Vout 100mv](https://github.com/user-attachments/assets/390387c4-6f4d-4388-9671-bc3ddb72ea44)
@@ -234,8 +234,8 @@ therefore the waveform is distorted .<br>
 
 ##### So I conclude that, Larger Amplitude Causes Early Distortion i.e at higher ampltitude transistor reaches saturation or cutoff earlier , limiting the range of valid Vincm.<br>
 
-## AC Analysis : <br>
-
+### AC Analysis : <br>
+ 
 For this we priorly need to calculate gain with theoretical values . <br>
 gain = Av= -gm*Rd 
 where gm= (2Id)/Vov = 2.72mS <br>
@@ -254,15 +254,162 @@ Bandwidth = 2.5GHz <br>
 |Av(in dB)      | 13.92dB      | 13.01dB         |
 |Av(in V/V)     | 4.97         | 4.47            |
 
+-----------------------------------------------------------------------------------------------
+## CIRCUIT 2 : Current Source-Loaded Differential Pair:<br>
+
+![ckt2](https://github.com/user-attachments/assets/29f529a8-371a-46fd-ac87-f8d4f0b7d582)
+
+### DC Analysis :<br>
+
+![dc ](https://github.com/user-attachments/assets/b9b1b711-a75f-487b-84d2-4fd805b25682)
+
+from this , the transistor to operate in saturation region ,<br>
+Vgs>Vth, <br>
+Vds> Vov <br>
+From observation our Vgs= 0.801V , Vth= 0.495V and Vds = 0.904V . <br>
+as,
+##### 0.801 > 0.495 our Vgs > Vth <br>
+as,
+##### 0.904 > (0.801-0.495) i.e Vds > Vov <br>
+The transistors lie in saturation region .<br>
+Therefore Q point = (Vds,Id) = (0.904V,0.6mA).<br>
+Now lets caluculate vincm(min), Vincm(max), Vout(min), Vout(max) .<br>
+
+##### Vincm(min)= Vth + Vp = 0.36 + 0.5 = 0.86V <br>
+##### Vincm(max) = Vdd - (Id*Rd) + Vth = 1.762V <br>
+##### Vout(min) = Vov1 + Vov3 = (0.8-0.36)+0.5 = 0.94V <br>
+##### Vout(max) = Vdd-(Id*Rd) = 1.402V <br>
+
+### Transient Analysis <br>
+##### For Amplitude = 50mV; <br>
+#### When Vincm = 0V :
+
+![0vout](https://github.com/user-attachments/assets/5da9ef25-f9a7-4a15-866f-095580640153)
+
+check the SPICE ERROR log,<br>
+Vgs = 0.948 V , Vth = 0.485V and Vds = 2.35V. <br>
+as Vgs>Vth and Vds> Vov , the transitor is in saturation region <br>
+
+#### When Vincm = 1.3 V <br>
+
+![1 3vout](https://github.com/user-attachments/assets/2aa277c7-5614-418a-9774-ab854a3ad3c2)
+
+Vincmp-p = 2.6V <br>
+Vout p-p = 1.1 + 1.62 = 2.79V<br>
+From theoretical value wkt Vout(max)p-p = 2.80V <br>
+So in this input volatge we are getting the maximum output swing.<br>
+
+#### When Vincm = 0.95V : we get the maximum symmetrical swing <br>
+
+![image](https://github.com/user-attachments/assets/46534a8e-5c3c-4302-86a1-42a0a2e4ad9f)
+
+#### When Vincm > 1.9V :<br>
+The transistor enters the triode region as Vds<Vov <br>
+#### FOR 50mV AMPLITUDE :
+|Parameter      |Theory value  | Practical value |
+|---------------|--------------|-----------------|
+|Vincm(min)     | 0.86V        | 0V              |
+|Vincm(max)     | 1.76V        | 1.9V            |
+
+### AC Analysis:<br>
+For this we priorly need to calculate gain with theoretical values . <br>
+gain = Av= -gm*Rd 
+where gm= (2Id)/Vov = 2.72mS <br>
+Av= -2.72m * 1.83k = -4.97 V/V <br>
+as we know Av= 20Log(vout/Vin)<br>
+in dB scale theoretical gain is 13.92dB <br>
+
+![ac crt](https://github.com/user-attachments/assets/b914f9ef-08fd-4ef0-a7b7-111efcf84be6)
+
+from this , practically we are getting 13.5dB gain <br>
+which is equal to , Av= 10^(13.5/20) = 4.73V <br>
+Bandwidth = 6 GHz <br>
+3db Bandwidth = 13.5GHz <br>
+|Parameter      |Theory value  | Practical value |
+|---------------|--------------|-----------------|
+|Av(in dB)      | 13.92dB      | 13.5dB          |
+|Av(in V/V)     | 4.97         | 4.73            |
+
+-----------------------------------------------------------------------------------------------
+## CIRCUIT 1 :  Simple Current Source Differential Pair:<br>
+
+![image](https://github.com/user-attachments/assets/d64dfbba-89d3-4b66-935c-7743e1f5e67f)
+
+### DC Analysis :<br>
+
+![dc](https://github.com/user-attachments/assets/cabc7978-f02f-4ae6-9297-5d3d5f362c22)
+
+from this , the transistor to operate in saturation region ,<br>
+Vgs>Vth, <br>
+Vds> Vov <br>
+From observation our Vgs= 0.801V , Vth= 0.495V and Vds = 0.904V . <br>
+as,
+##### 0.801 > 0.495 our Vgs > Vth <br>
+as,
+##### 0.904 > (0.801-0.495) i.e Vds > Vov <br>
+The transistors lie in saturation region .<br>
+Therefore Q point = (Vds,Id) = (0.904V,0.6mA).<br>
+Now lets caluculate vincm(min), Vincm(max), Vout(min), Vout(max) .<br>
+
+##### Vincm(min)= Vth + Vp = 0.36 + 0.5 = 0.86V <br>
+##### Vincm(max) = Vdd - (Id*Rd) + Vth = 1.762V <br>
+##### Vout(min) = Vov1 + Vov3 = (0.8-0.36)+0.5 = 0.94V <br>
+##### Vout(max) = Vdd-(Id*Rd) = 1.402V <br>
+
+### Transient Analysis <br>
+### For Amplitude = 100mV :
+#### * When 0< Vincm < 0.6V <br>
+ 
+![0 3vout](https://github.com/user-attachments/assets/d74a8a8d-ee29-43c5-8eec-aaf502b51baf)
+ 
+The transitor is in off state , therefore you are observing distortion or the clipping off of the output circuit . <br>
+
+#### When Vincm = 1.3 V <br>
+
+![1 3vout max swing](https://github.com/user-attachments/assets/d5f1bf17-c9ae-4bf7-bdba-1b41e4c716ea)
+
+Vincmp-p = 2.6V <br>
+Vout p-p = 1.21 + 1.60 = 2.80V<br>
+From theoretical value wkt Vout(max)p-p = 2.80V <br>
+So in this input volatge we are getting the maximum output swing.<br>
+
+#### When Vincm > 2.5V :<br>
+
+![3vout](https://github.com/user-attachments/assets/c2153f49-32d8-40c0-a828-8d37d6b5e7ee)
+
+The transistor enters the triode region as Vds<Vov <br>
+
+### For Amplitude = 100mV :
+#### * When 0< Vincm < 0.7V <br>
+
+![0 6vout 100mv](https://github.com/user-attachments/assets/51ba1fcc-83e1-4268-b292-24204d894399)
+
+The transitor is in off state , therefore you are observing distortion or the clipping off of the output circuit . <br>
+
+ #### When Vincm = 1.3 V <br>
+
+![1 3vout 100mv](https://github.com/user-attachments/assets/aa7f901c-4a24-4101-b278-c5bd7acf044b)
+
+Vincmp-p = 2.6V <br>
+Vout p-p = 1.0 + 1.78 = 2.78V<br>
+From theoretical value wkt Vout(max)p-p = 2.80V <br>
+So in this input volatge we are getting the maximum output swing.<br>
+
+#### When Vincm > 2V :<br>
+The transistor enters the triode region as Vds<Vov <br>
+
+#### FOR 50mV AMPLITUDE :
+|Parameter      |Theory value  | Practical value |
+|---------------|--------------|-----------------|
+|Vincm(min)     | 0.86V        | 0.66V           |
+|Vincm(max)     | 1.76V        | 2,50V           |
+
+#### FOR 100mV AMPLITUDE :
+|Parameter      |Theory value  | Practical value |
+|---------------|--------------|-----------------|
+|Vincm(min)     | 0.86V        | 0.7V            |
+|Vincm(max)     | 1.76V        | 2V              |
 
 
 
-
-
-
-
-
-
-
-
-
+ 
