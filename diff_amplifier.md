@@ -513,6 +513,8 @@ Bandwidth = 1.01 GHz <br>
 * Until i kept the W/L ratio of 3 transistors in 3rd ciruit there was a zero Vth , then Vth got updated .<br>
 * When I replaced all things by mosfet , was not able to get the required output , later after managing W/L Vout was set . As there no parameters that Vout actually depends on we may not be able to vary Vout, so there was little difference in the gain. <br>
 * When we set Ac phase as 180 for one of the input there was a high gain.<br>
+* In a differential amplifier, the tail resistor  is often replaced with a current source  to improve circuit performance to make current stable and increase gain<br>
+* In a differential amplifier, the current source  is often implemented using a MOSFET current mirror or active current source instead of a simple resistor or ideal current source because to increase output impedance and increase gain as well <br>
 
  
 
