@@ -515,7 +515,7 @@ Bandwidth = 1.01 GHz <br>
 * When we set Ac phase as 180 for one of the input there was a high gain.<br>
 * In a differential amplifier, the tail resistor  is often replaced with a current source  to improve circuit performance to make current stable and increase gain<br>
 * In a differential amplifier, the current source  is often implemented using a MOSFET current mirror or active current source instead of a simple resistor or ideal current source because to increase output impedance and increase gain as well <br>
-
+* When a PMOS transistor has its drain connected back to its gate, it forces the MOSFET into saturation region, making it function as a current source.<br>
  
 
 
