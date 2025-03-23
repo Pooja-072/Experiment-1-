@@ -49,6 +49,14 @@ The relation between the Iout and Iref can be given by the same expression.<br>
 I<sub>out</sub> = (W/L)<sub>2</sub>/(W/L)<sub>1</sub> * I<sub>ref</sub> <br>
 The only thing which needs to be ensured is that M1 should operate in the saturation region. Or in other words, VSD1 ≥ VSG – |VTP |, Where VTP is the threshold voltage of the PMOS transistor.<br>
 
+-------------------------------------------------------------------------------------------------
+## SIMULATION : NMOS current mirror circuit with a resistive load<br>
+#### Circuit Components & Functionality:<br>
+* V1 (1.8V Supply): Provides the operating voltage for the circuit.<br>
+* Iref (100µA): Sets the reference current through M2.<br>
+* M2 (Diode-Connected NMOS): Operates in saturation and sets the gate voltage Vx.<br>
+*M1 (Mirroring NMOS): Copies the current from M2 to R1.<br>
+*R1 (820Ω Load Resistor): Converts the output current into a voltage.<br>
 
 
 
