@@ -58,7 +58,8 @@ The only thing which needs to be ensured is that M1 should operate in the satura
 *M1 (Mirroring NMOS): Copies the current from M2 to R1.<br>
 *R1 (820Ω Load Resistor): Converts the output current into a voltage.<br>
 
-![kk](https://github.com/user-attachments/assets/550ce6b3-2e09-4e38-9306-4c76bdb6f805)
+![ckt dia](https://github.com/user-attachments/assets/f1a42946-8c17-4549-82df-3ef7a192b852)
+
 
 
 
