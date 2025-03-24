@@ -270,10 +270,29 @@ This circuit is a CMOS Differential Amplifier with a Current Mirror Load, common
 |Id3,Id4       |0.5mA               | 0.48mA          |
 |Iref          |0.5mA               | 0.5mA           |
 
+### TRANSIENT ANALYSIS : <BR>
 
+#### For Vin < 1.3V <br>
+i.e Vin(min) = 0V<br>
 
+![0V](https://github.com/user-attachments/assets/82261936-55e7-462b-a3c2-827fed7602a0)
 
+For Vin=0V also the amplification takes place with high output peak to peak.<br>
 
+#### For Vin > 1.3V <br>
+
+i.e Vin = 1.3V<br>
+
+![image](https://github.com/user-attachments/assets/515200f5-8d67-4ac9-bbf2-6f2af429d284)
+
+Voutpp = 1.39+1.40 = 2.79V 
+
+i.e Vin = 3V<br>
+![image](https://github.com/user-attachments/assets/7554c19d-2c68-4bdd-85f1-6657fd18782a)
+
+there is a distortion in output wavwform <br>
+
+Therefore 
 
 
 
