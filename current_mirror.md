@@ -253,9 +253,22 @@ Bandwith = 104.06MHz <br>
 
 ### Design differential amplifie for following specifications Vdd=2.5V, P≤3mW, Vicm = 1.3V, Vocm = 1.4V, Vp = 0.5V. Perform DC analysis, transient analysis & frequency response and extract the required parameters.
 
-![ckt diagram](https://github.com/user-attachments/assets/c32e1d0f-4338-4b4a-9a95-85e9aa2fc622)
+![image](https://github.com/user-attachments/assets/d3d28dfb-8522-43b2-a0b6-ed6ff853c3c9)
 
-This circuit is a CMOS Differential Amplifier with a Current Mirror Load, commonly used as the input stage of an Operational Amplifier (Op-Amp) or as a Comparator. It amplifies the difference between two input voltages (Vin1, Vin2) while rejecting common-mode signals
+This circuit is a CMOS Differential Amplifier with a Current Mirror Load, commonly used as the input stage of an Operational Amplifier (Op-Amp) or as a Comparator. It amplifies the difference between two input voltages (Vin1, Vin2) while rejecting common-mode signals<br>
+
+### DC ANALYSIS :<br>
+
+![image](https://github.com/user-attachments/assets/3ee81caf-0256-4256-81db-bab6aa95763f)
+
+| Parameter    | Theoretical value  | Practical value |
+|--------------|--------------------|-----------------|
+|Voutcm        | 1.40V              | 1.40V           |
+|Vp            | 0.5V               | 0.62V           |
+|Id1,Id2       | 0.5mA              | 0.48mA          |
+|Iss           | 1mA                | 0.96mA          |
+|Id3,Id4       |0.5mA               | 0.48mA          |
+|Iref          |0.5mA               | 0.5mA           |
 
 
 
