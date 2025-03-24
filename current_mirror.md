@@ -292,7 +292,12 @@ i.e Vin = 3V<br>
 
 there is a distortion in output wavwform <br>
 
-Therefore 
+Therefore <br>
+|Parameter      |Theory value  | Practical value |
+|---------------|--------------|-----------------|
+|Vincm(min)     | 0.86V        | 0V              |
+|Vincm(max)     | 1.76V        | 2.79V           |
+high range of Vout because 
 
 
 
