@@ -60,6 +60,25 @@ The only thing which needs to be ensured is that M1 should operate in the satura
 
 ![ckt dia](https://github.com/user-attachments/assets/f1a42946-8c17-4549-82df-3ef7a192b852)
 
+#### OBSERVATION TABLE :<br>
+For Iref = 100u<br>
+
+|Iout (Expted)(A) |Iout(appeared)(A) |(W/L)<sub>2</sub> |(W/L)<sub>1</sub> | Vx (V) |Vout(V) |
+|-----------------|------------------|------------------|------------------|--------|--------|
+|100u             |103.5u            |180n/180n         |180n/180n         |1.27    | 1.71   |
+|100u             |10.715u           |500n/500n         |500n/500n         |1.43    | 1.717  |
+|100u             |100.648u          |1u/1u             |1u/1u             |1.39    | 1.7174 |
+|200u             |197.6u            |1u/2u             |1u/2u             |1.397   |  1.63  | 
+|100u             |101.5u            |1u/2u             |1u/2u             |1.087   | 1.716  | 
+|100u             |102.131u          |1u/3u             |1u/3u             |0.95    |1.7172  |
+
+* ##### Iout is slightly higher than the expected value in most cases.<br>
+For W/L = 180n/180n , expected Iout=100uA, but appeared Iout = 103.5uA. This happens because as Vds increases, the effective channel length decreases, causing higher drain current.<br>
+* ##### Higher W/L ratios (shorter channel lengths) show more deviation.<br>
+For W/L = 500n/500n , Iout=100uA drops significantly (10.715μA), indicating increased channel length modulation effects.Shorter channel lengths mean higher λ, leading to larger variations in current.<br>
+* ##### For longer transistors (L increased),Vx is lower, stabilizing Iout): <br>
+Vx decreases as L increases .
+
 
 
 
