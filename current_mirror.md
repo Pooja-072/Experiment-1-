@@ -143,6 +143,7 @@ Vov1 = Vx - Vth1 = 0.9 - 0.36 = 0.4V <br>
 Vov3 = Vin - Vth3 = 0.5 - 0.36 = 0.14V <br>
 ###### Voutmax = 1.8 - (0.4 + 0.14) = 1.62V <br>
 
+### CASE 1 : For L = 180n <br>
 #### For Vin < 0.5V <br>
 i.e Vin=0.45V<br>
 ![0 45V 1isto1 transient](https://github.com/user-attachments/assets/5905bec6-3d95-4d71-8b83-066b7eed67c6)
@@ -158,14 +159,48 @@ Voutpp = 0.34+ 1.37 = 1.72 V <br>
 |Vinmin          | 0.5V             | 0.48V           |
 |Voutmax         | 1.65V            | 1.72V           |
 
+#### CASE2: For L = 500n <br>
+
+![image](https://github.com/user-attachments/assets/b6d3cbf3-a7f9-415a-9f43-c9c397d51914)
+
+Voutpp = 0.4 + 1.29 = 1.69V <br>
+
+#### CASE 3: For L = 1u <br>
+
+![image](https://github.com/user-attachments/assets/bd3ddf01-3c9b-4328-8dd9-2f1b575f5915)
+
+Voutpp = 0.34 + 1.36 = 1.7V <br>
+
+
 ### AC ANALYSIS :<br>
+### CASE 1 : For L = 180n <br>
 ![ac analysis 1isto1](https://github.com/user-attachments/assets/7515d0d7-5dba-4534-aa05-bb49a3aaac5d)
 
 Av (dB) = 29.82 dB<br>
-Av (in V/V) = 10^(29.82/10) = 30.97V/V
+Av (in V/V) = 10^(29.82/20) = 30.97V/V
 Now,<br>
-3dB gain = 29.82-3 = 26.82V/V <br>
+3dB gain = 29.82-3 = 26.82 dB <br>
 Bandwith = 104.06MHz <br>
+
+#### CASE2: For L = 500n <br>
+
+![image](https://github.com/user-attachments/assets/f18a3e2c-7312-4b35-8e32-6a7fc1cbaf78)
+
+Av (dB) = 39 dB<br>
+Now,<br>
+3dB gain =39-3 = 38 dB <br>
+Bandwith = 24.3 MHz <br>
+
+#### CASE 3: For L = 1u <br>
+
+![image](https://github.com/user-attachments/assets/12c16043-8ac6-4a3f-b31f-61b57d53df8c)
+
+Av (dB) = 41 dB<br>
+Av (in V/V) = 10^(41/20) = 112V/V
+Now,<br>
+3dB gain = 39-3 = 36 dB <br>
+Bandwith = 41.1 MHz <br>
+
 
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -242,10 +277,19 @@ Voutpp = 0.75+ 1.062 = 1.812 V <br>
 ![ac 1 isto 2](https://github.com/user-attachments/assets/8698ab31-545e-4384-9044-601b47b0adc6)
 
 Av (dB) = 29.82 dB<br>
-Av (in V/V) = 10^(29.82/10) = 30.97V/V
+Av (in V/V) = 10^(29.82/20) = 30.97V/V
 Now,<br>
 3dB gain = 29.82-3 = 26.82V/V <br>
 Bandwith = 104.06MHz <br>
+
+#### Inference:
+*Reference current is copied or mirrored for other two mosfets.The output currentis exactly equal to the reference current.
+*The output current remains the same regardless of the connected load, as long as the transistor stays in the saturation region
+*Vx and Vout will be same when current gets mirrored.
+*As length increases Vx and Vout decreases.
+*As gain increases bandwidth decreases.
+*As the refence current is 0.277mA and doing 1:1 ratio of current mirroring the Current must be copied of the same that is 0.277mA.
+*In transient analysis we see the maximum output swing caused.
 
 ------------------------------------------------------------------------------------------------------------------------------
 ## PART - B <br>
@@ -297,7 +341,28 @@ Therefore <br>
 |---------------|--------------|-----------------|
 |Vincm(min)     | 0.86V        | 0V              |
 |Vincm(max)     | 1.76V        | 2.79V           |
-high range of Vout because 
+
+### AC ANALYSIS :<br>
+
+![ac ](https://github.com/user-attachments/assets/132c0fff-c2c5-486c-8498-45c254ff8361)
+
+Av (dB) = 32.2 dB<br>
+Av (in V/V) = 10^(32.2/20) = 40.7V/V
+Now,<br>
+3dB gain = 32.2 - 3 = 29.2V/V <br>
+Bandwith = 7GMHz <br>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#### Inference:<br>
+* Differential Pair (M3 & M4) : Vin1 and Vin2 and generates a differential current.Operates in saturation for linear amplification.
+* Current Mirror Load (M1 & M2) :Converts the differential current into a single-ended output.Provides high gain by increasing output resistance.
+* Biasing Current Source (M6) : Ensures a constant bias current for stable operation.Determines the gain and bandwidth of the amplifier.
+* Active Load (M5):Helps improve the circuit's linearity and output swing.
+* Output Distortion for Vin <0.5V : If Vin is too low, M3 or M4 enter triode, causing distortion.Proper biasing is required to maintain transistors in saturation.
+* Channel Length Modulation Effect: Causes a slight increase in drain current as Vds increases.
+  Affects output voltage but is minimized by using longer channel lengths.
+
 
 
 
