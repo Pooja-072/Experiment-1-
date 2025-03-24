@@ -249,9 +249,13 @@ Bandwith = 104.06MHz <br>
 
 ------------------------------------------------------------------------------------------------------------------------------
 ## PART - B <br>
+## SIMULATION : Differential Amplifier with Current Mirror Load <br>
 
+### Design differential amplifie for following specifications Vdd=2.5V, P≤3mW, Vicm = 1.3V, Vocm = 1.4V, Vp = 0.5V. Perform DC analysis, transient analysis & frequency response and extract the required parameters.
 
+![ckt diagram](https://github.com/user-attachments/assets/c32e1d0f-4338-4b4a-9a95-85e9aa2fc622)
 
+This circuit is a CMOS Differential Amplifier with a Current Mirror Load, commonly used as the input stage of an Operational Amplifier (Op-Amp) or as a Comparator. It amplifies the difference between two input voltages (Vin1, Vin2) while rejecting common-mode signals
 
 
 
