@@ -52,7 +52,7 @@ I<sub>out</sub> = (W/L)<sub>2</sub>/(W/L)<sub>1</sub> * I<sub>ref</sub> <br>
 The only thing which needs to be ensured is that M1 should operate in the saturation region. Or in other words, VSD1 ≥ VSG – |VTP |, Where VTP is the threshold voltage of the PMOS transistor.<br>
 
 -------------------------------------------------------------------------------------------------
-## PART - A <br>
+
 ## SIMULATION : NMOS current mirror circuit with a resistive load<br>
 #### Circuit Components & Functionality:<br>
 * V1 (1.8V Supply): Provides the operating voltage for the circuit.<br>
@@ -83,6 +83,7 @@ For W/L = 500n/500n , Iout=100uA drops significantly (10.715μA), indicating inc
 Vx decreases as L increases .<br>
 
 ------------------------------------------------------------------------------------------------
+## PART - A <br>
 ## SIMULATION : PMOS Current Mirror with NMOS Amplifier <br>
 
 ### Design a current mirror circuit which has a gain of AV = -10V/V, power supply of Vdd = 1.8V, and power of P <= 1mW. Find reference current (Iref), output current (Id), and total current (Itotal). Perform DC and AC analysis for mirror ratio 1:1, 1:2. Vary length from 180nm -> 500nm -> 1µm and do the analysis.<br>
@@ -247,6 +248,7 @@ Now,<br>
 Bandwith = 104.06MHz <br>
 
 ------------------------------------------------------------------------------------------------------------------------------
+## PART - B <br>
 
 
 
