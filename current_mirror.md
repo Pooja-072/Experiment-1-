@@ -52,6 +52,7 @@ I<sub>out</sub> = (W/L)<sub>2</sub>/(W/L)<sub>1</sub> * I<sub>ref</sub> <br>
 The only thing which needs to be ensured is that M1 should operate in the saturation region. Or in other words, VSD1 ≥ VSG – |VTP |, Where VTP is the threshold voltage of the PMOS transistor.<br>
 
 -------------------------------------------------------------------------------------------------
+## PART - A <br>
 ## SIMULATION : NMOS current mirror circuit with a resistive load<br>
 #### Circuit Components & Functionality:<br>
 * V1 (1.8V Supply): Provides the operating voltage for the circuit.<br>
@@ -130,12 +131,123 @@ also,<br>
 * The current mirror is highly stable with negligible variations in Iout.<br>
 * Channel length modulation does not significantly impact the circuit, likely due to the long-channel MOSFETs used.<br>
 
-### AC ANALYSIS : <BR>
+### TRANSIENT ANALYSIS : <BR>
 for Amplitude = 5m and f= 1kHz <br>
 Vin is the gate voltage of m3 (nmos) <br>
 (V)<sub>gs3</sub> = Vg - Vs (Vs=0V) <br>
 ###### Vin(min) = (V)<sub>gs3</sub> = 0.5V <br>
 Now, <br>
+Voutmax = Vdd - |Vov1 + Vov2 |<br>
+Vov1 = Vx - Vth1 = 0.9 - 0.36 = 0.4V <br>
+Vov3 = Vin - Vth3 = 0.5 - 0.36 = 0.14V <br>
+###### Voutmax = 1.8 - (0.4 + 0.14) = 1.62V <br>
+
+#### For Vin < 0.5V <br>
+i.e Vin=0.45V<br>
+![0 45V 1isto1 transient](https://github.com/user-attachments/assets/5905bec6-3d95-4d71-8b83-066b7eed67c6)
+
+When Vin is below 0.5V in your circuit, the output gets distorted because MOSFET M3 Moves Out of Saturation. <br>
+#### For Vin >= 0.5V <br>
+i.e Vin=0.5V<br>
+![0 5V Voutpp max 1isto1](https://github.com/user-attachments/assets/80f6e735-25fd-430b-b670-1cef862d4eb7)
+
+Voutpp = 0.34+ 1.37 = 1.72 V <br>
+|                |theoretical       | practical       |
+|----------------|------------------|-----------------|
+|Vinmin          | 0.5V             | 0.48V           |
+|Voutmax         | 1.65V            | 1.72V           |
+
+### AC ANALYSIS :<br>
+![ac analysis 1isto1](https://github.com/user-attachments/assets/7515d0d7-5dba-4534-aa05-bb49a3aaac5d)
+
+Av (dB) = 29.82 dB<br>
+Av (in V/V) = 10^(29.82/10) = 30.97V/V
+Now,<br>
+3dB gain = 29.82-3 = 26.82V/V <br>
+Bandwith = 104.06MHz <br>
+
+------------------------------------------------------------------------------------------------------------------------------
+
+### FOR 1:2 RATIO <br>
+
+![image](https://github.com/user-attachments/assets/4d695997-7f72-4c18-8b69-9c1e4956ee61)
+
+This circuit consists of a PMOS current mirror (M1 & M2) and an NMOS amplifier stage (M3). The purpose of this circuit is to generate a stable bias current and amplify an input signal.<br>
+
+##### Calculation:<br>
+Given , Vdd = 1.8V and P<=1mV <br>
+for P= 1mV, <br>
+Itot = P/Vdd = 1m / 1.8 = 0.55mA 
+###### Iout = 0.55mA
+Itot = Iref + Iout <br>
+for 1:2 ratio Iout = 2Iref <br>
+Therefore ,<br>
+###### Iref = Itot/3 = 0.183 mA <br>
+###### Iout = 2Iref = 0.366 mA <br>
+Now<br>
+###### Vin>= 0.48V<br>
+also,<br>
+###### Vout = Vdd/2 = 0.90V <br>
+###### Vout = Vx = 0.90V<br>
+
+### DC ANALYSIS :<br>
+
+#### For L = 180n <br>
+
+![180n 1i2](https://github.com/user-attachments/assets/46b6011f-7350-4cf2-a957-cfcb104d3c73)
+
+#### For L = 500n <br>
+
+![500n 1isto2](https://github.com/user-attachments/assets/d739dcde-ed18-4d8f-ab5f-ab006bcd885c)
+
+#### For L = 1u <br>
+
+![1u 1isto 2 ](https://github.com/user-attachments/assets/c44ea365-8b5d-4b2c-8583-1a1763839a5c)
+
+#### COMPARISION TABLE :<br>
+
+|Iref (A)    |Iout (A)   |(W/L)<sub>1</sub> |(W/L)<sub>2</sub> |(W/L)<sub>3</sub> |  Vx (V) |Vout(V) |
+|------------|-----------|------------------|------------------|------------------|---------|--------|
+|0.183m      |0.366m     |5m/180n           |10m/180n          |155.82m/180n      | 0.90    |0.90    |
+|0.183m      |0.366m     |14.28m/500n       |29.16m/500n       |263.88m/500n      | 0.90    |0.90    |
+|0.183m      |0.37m      |29.2m/1u          |59.4m/1u          |314.86m/1u        | 0.90    |0.90    |
+
+* The current mirror is highly stable with negligible variations in Iout.<br>
+* Channel length modulation does not significantly impact the circuit, likely due to the long-channel MOSFETs used.<br>
+
+### TRANSIENT ANALYSIS : <BR>
+for Amplitude = 5m and f= 1kHz <br>
+Vin is the gate voltage of m3 (nmos) <br>
+(V)<sub>gs3</sub> = Vg - Vs (Vs=0V) <br>
+###### Vin(min) = (V)<sub>gs3</sub> = 0.5V <br>
+Now, <br>
+Voutmax = Vdd - |Vov1 + Vov2 |<br>
+Vov1 = Vx - Vth1 = 0.9 - 0.36 = 0.4V <br>
+Vov3 = Vin - Vth3 = 0.5 - 0.36 = 0.14V <br>
+###### Voutmax = 1.8 - (0.4 + 0.14) = 1.62V <br>
+
+#### For Vin >= 0.5V <br>
+i.e Vin=0.5V<br>
+![1st2 transient](https://github.com/user-attachments/assets/14155830-9a1c-4fa1-ba7f-48b2d6eb9448)
+
+Voutpp = 0.75+ 1.062 = 1.812 V <br>
+|                |theoretical       | practical       |
+|----------------|------------------|-----------------|
+|Vinmin          | 0.5V             | 0.48V           |
+|Voutmax         | 1.65V            | 1.812V          |
+
+### AC ANALYSIS :<br>
+
+![ac 1 isto 2](https://github.com/user-attachments/assets/8698ab31-545e-4384-9044-601b47b0adc6)
+
+Av (dB) = 29.82 dB<br>
+Av (in V/V) = 10^(29.82/10) = 30.97V/V
+Now,<br>
+3dB gain = 29.82-3 = 26.82V/V <br>
+Bandwith = 104.06MHz <br>
+
+------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
