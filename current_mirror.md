@@ -77,7 +77,56 @@ For W/L = 180n/180n , expected Iout=100uA, but appeared Iout = 103.5uA. This hap
 * ##### Higher W/L ratios (shorter channel lengths) show more deviation.<br>
 For W/L = 500n/500n , Iout=100uA drops significantly (10.715μA), indicating increased channel length modulation effects.Shorter channel lengths mean higher λ, leading to larger variations in current.<br>
 * ##### For longer transistors (L increased),Vx is lower, stabilizing Iout): <br>
-Vx decreases as L increases .
+Vx decreases as L increases .<br>
+
+------------------------------------------------------------------------------------------------
+## SIMULATION : PMOS Current Mirror with NMOS Amplifier <br>
+
+### Design a current mirror circuit which has a gain of AV = -10V/V, power supply of Vdd = 1.8V, and power of P <= 1mW. Find reference current (Iref), output current (Id), and total current (Itotal). Perform DC and AC analysis for mirror ratio 1:1, 1:2. Vary length from 180nm -> 500nm -> 1µm and do the analysis.<br>
+
+### FOR 1:1 RATIO 
+
+![main ckt diagram part1](https://github.com/user-attachments/assets/0975d4af-b847-4b85-8189-c35c5cf32b6d)
+
+This circuit consists of a PMOS current mirror (M1 & M2) and an NMOS amplifier stage (M3). The purpose of this circuit is to generate a stable bias current and amplify an input signal.<br>
+
+##### Calculation:<br>
+Given , Vdd = 1.8V and P<=1mV <br>
+for P= 1mV, <br>
+Itot = P/Vdd = 1m / 1.8 = 0.55mA 
+###### Iout = 0.55mA
+Itot = Iref + Iout <br>
+for 1:1 ratio Iref = Iout <br>
+Therefore ,<br>
+###### Iref = Iout = Itot/2 = 0.277mA <br>
+for Vin,<br>
+as Vin = Vgs3 , Vin>=Vth<br>
+###### Vin>= 0.48V<br>
+also,<br>
+###### Vout = Vdd/2 = 0.90V <br>
+###### Vout = Vx = 0.90V<br>
+
+### DC ANALYSIS :<br>
+
+#### For L = 180n <br>
+![180n 1isto1 ](https://github.com/user-attachments/assets/2ae367a1-67bd-4a50-9f41-e3619660f385)
+
+#### For L = 500n <br>
+![500n 1isto 1 ratio](https://github.com/user-attachments/assets/99844176-eb9c-4a57-91bf-40834ee129d3)
+
+#### For L = 1u <br>
+![1u 1isto 1 ratio](https://github.com/user-attachments/assets/9b81d8a3-2b08-46f4-97c9-ffa150476baa)
+
+#### COMPARISION TABLE :<br>
+
+|Iref (A)    |Iout (A)   |(W/L)<sub>1</sub> |(W/L)<sub>2</sub> |(W/L)<sub>3</sub> |  Vx (V) |Vout(V) |
+|------------|-----------|------------------|------------------|------------------|---------|--------|
+|0.277m      |0.277m     |7.3u/180n         |7.3u/180n         |117.94u/180n      | 0.90    |0.90    |
+|0.277m      |0.277m     |22u/500n          |22u/500n          |119.6u/500n       | 0.90    |0.90    |
+|0.277m      |0.277m     |44.24u/1u         |44.24u/1u         |234.254u/1u       | 0.90    |0.90    |
+
+
+
 
 
 
