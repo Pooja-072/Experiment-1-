@@ -40,6 +40,8 @@ Fabrication variations can cause mismatch in threshold voltage (V<sub>th</sub>),
 Practical mirrors suffer from a small variation in I<sub>out</sub>due to V<sub>ds</sub> changes.<br>
 Using a cascode current mirror reduces this effect by increasing output resistance.<br>
 
+-----------------------------------------------------------------------------------------------------------------------------
+
 ## PMOS Current Mirror<br>
 
 ![image](https://github.com/user-attachments/assets/1a870006-1e99-448a-b5e7-c4ddd99f8417)
@@ -125,11 +127,15 @@ also,<br>
 |0.277m      |0.277m     |22u/500n          |22u/500n          |119.6u/500n       | 0.90    |0.90    |
 |0.277m      |0.277m     |44.24u/1u         |44.24u/1u         |234.254u/1u       | 0.90    |0.90    |
 
+* The current mirror is highly stable with negligible variations in Iout.<br>
+* Channel length modulation does not significantly impact the circuit, likely due to the long-channel MOSFETs used.<br>
 
-
-
-
-
+### AC ANALYSIS : <BR>
+for Amplitude = 5m and f= 1kHz <br>
+Vin is the gate voltage of m3 (nmos) <br>
+(V)<sub>gs3</sub> = Vg - Vs (Vs=0V) <br>
+###### Vin(min) = (V)<sub>gs3</sub> = 0.5V <br>
+Now, <br>
 
 
 
