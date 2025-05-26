@@ -155,7 +155,7 @@ R1 = 72kohm<br> & R2 = 72kohm<br>
 by formula <br>
 C = 1nF<br>
 
-#### CASE 2:<br>
+#### CASE 3:<br>
 Given<br>
 ton = 0.1ms & toff = 0.4ms<br>
 Check if possible:<br>
