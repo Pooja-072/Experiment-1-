@@ -143,6 +143,7 @@ CMRR = 97dB<br>
 * High CMRR of ~70,960 V/V demonstrated excellent common-mode noise rejection.
 
 ### INFERENCE<br>
+<br>
 1. Initial Output Issue:<br>
 The output voltage was stuck at a low level (~0.4 mV instead of the expected ~0.8 V).<br>
 This was due to improper biasing and incorrect Vds voltages for M5 and M6.<br>
