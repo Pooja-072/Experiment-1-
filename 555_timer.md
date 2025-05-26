@@ -41,7 +41,7 @@ A monostable multivibrator works by staying in a stable state under normal condi
 -------------------------------------------------------------------------------------------------
 ### DESIGN QUESTION:<br>
 
-#### To use the 555 timer IC to design and build a monostable multivibrator that, when activated, produces an output pulse with a width of 0.5 milliseconds.<br>
+#### To use the 555 timer IC to design and build a monostable multivibrator such that, when activated, produces an output pulse with a width of 0.5 milliseconds.<br>
 
 Calculation:<br>
 Given:<br>
