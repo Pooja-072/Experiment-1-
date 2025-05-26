@@ -8,20 +8,20 @@ In a 555 timer monostable mode, pressing a button (trigger) produces a high outp
 ### Working Principle of Monostable Multivibrator:
 A monostable multivibrator works by staying in a stable state under normal conditions. When an external trigger pulse is applied, the circuit temporarily shifts to an unstable state (for a pre-defined time) and then returns automatically to the stable state.<br>
 <br>
-#### Steps in the Working:<br>
-1,Initial State (Stable):<<br>
-* Output is in a default logic level (usually LOW or 0V).<<br>
-* No changes occur until a trigger is received.<<br>
-2.Triggering:<<br>
-* An external negative (or positive) trigger pulse is applied.<<br>
-* The circuit detects this pulse and immediately switches to the unstable state.<<br>
-* Output becomes HIGH for a specific time.<<br>
-3.Timing Interval (Unstable State):<<br>
-* A timing capacitor starts charging or discharging through a resistor.<<br>
-* The time period {𝑇},
-T is determined by the RC time constant.<<br>
-#### 𝑇 = 1.1×𝑅×𝐶 (for 555 timer-based monostable)<<br>
-4.Return to Stable State:<<br>
+#### Steps in the Working: <br>
+1,Initial State (Stable): <br>
+* Output is in a default logic level (usually LOW or 0V).<br>
+* No changes occur until a trigger is received.<br>
+2.Triggering:<br>
+* An external negative (or positive) trigger pulse is applied.<br>
+* The circuit detects this pulse and immediately switches to the unstable state.<br>
+* Output becomes HIGH for a specific time.<br>
+3.Timing Interval (Unstable State):<br>
+* A timing capacitor starts charging or discharging through a resistor.<br>
+* The time period {𝑇},<br>
+T is determined by the RC time constant.<br>
+#### 𝑇 = 1.1×𝑅×𝐶 (for 555 timer-based monostable)<br>
+4.Return to Stable State:<br>
 * After the time period, the capacitor reaches a certain voltage.
 * The circuit automatically resets itself and returns to its original stable state (LOW).
 
