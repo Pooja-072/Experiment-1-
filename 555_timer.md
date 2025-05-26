@@ -201,3 +201,16 @@ R1=159ohm<br>
 * Third waveform: Output of Positive Clipper Circuit – positive peaks are clipped, negative parts remain.
 * Fourth waveform: Output of Monostable Multivibrator – single pulse with 0.5 ms duration.
 
+### Results:<br>
+
+1.Inverted Astable Multivibrator Output: A continuous square wave, but inverted (starts from LOW to HIGH).<br>
+2.Differentiator Circuit Output (using C = 0.1 µF): Produces narrow spikes at each transition of the square wave — positive spike at falling edge, negative spike at rising edge of the input.<br>
+3.Positive Clipper Output: The waveform after clipping removes or limits positive voltage spikes, allowing only negative parts of the signal to pass.<br>
+4.Monostable Multivibrator Output (Pulse width = 0.5 ms):For each triggering input (like a negative spike), it produces a single fixed-width HIGH pulse of 0.5 ms.<br>
+
+### Inference:<br>
+* The signal flow demonstrates how complex waveforms can be generated and shaped using basic analog building blocks.
+* The differentiator emphasizes high-frequency components (edges), showing its role in transient detection.
+* The clipper introduces non-linearity, proving useful in waveform limiting and protection circuits.
+* The monostable multivibrator acts as a timing element, converting brief triggers into uniform timed pulses.
+
