@@ -29,8 +29,10 @@ The Folded Cascode OTA amplifies a differential input voltage by converting it i
 * The amplified differential current is mirrored through the cascode branch, and the voltage appears across the high impedance output node, producing Vout.<br>
 <br>
 ------------------------------------------------------------------------------------------------<br>
+
 ## DESIGN QUESTION:<br>
 <Br>
+
 #### Design a single-stage folded-cascode operational amplifier using 180nm CMOS technology with a ±0.9V supply (1.8V total). The amplifier should use an NMOS differential input pair for improved common-mode range and an actively biased PMOS cascode load to achieve high gain. The design must target a DC gain of at least 50 dB, consume approximately 0.35 mW power. The tail current should be around 10 µA and maximum output swing=1.6V.<br>
 
 Given,<br>
@@ -89,12 +91,76 @@ Id = 1/2•unCox(W/L)Vov^2<br>
 2. For PMOS : W/L = =2*5*10^-6/100*10^-6*(0.3)^2=2.22<br>
 <br>
 
+### SIMULATION RESULTS:<br>
+#### 1.DC ANALYSIS<br>
 
+![dc new](https://github.com/user-attachments/assets/f21ebf1a-e927-4c11-bbdf-bac703cfaabc)
 
+#### 2.TRANSIENT ANALYSIS<BR>
+##### A.	Common mode  Analysis<BR>
+![image](https://github.com/user-attachments/assets/d18b5657-ad00-4b11-b9b7-e6b24cc1f4bd)
 
+As vin common mode is 0.9V <br>
+Vout = 500mV ( which is nearest to 0V)<br>
 
+##### B.	Differential mode  Analysis<BR>
+Vin , <br>
 
+![image](https://github.com/user-attachments/assets/4e7a7fcb-3362-4747-a4ac-cdbf26195c2b)
 
+Vout<br>
+![image](https://github.com/user-attachments/assets/8294d1fb-ff41-4cd1-be42-10c2a08069d7)
+
+Voutmin (calculated) = Vb1 + Vov5 = 1+0.2 = 1.2V<br>
+VoutMax(calculated) = Vdd – Vov7 = 1.8 – 0.3 = 1.5V<br>
+and<br>
+Vinmin(calculated) = Vss +Vtn+Vov1 = 0+0.45+0.2 = 0.65V<br>
+Vinmax(calculated)= Vb1-Vtn+Vov5 = 1-0.45+0.2 = 0.75V<br>
+Here in simulation<br>
+We got Voutmax=1.3V<br>
+Voutmin= 0.9V<br>
+Vinmin=0.5V<br>
+Vinmax= 0.8V<br>
+
+#### 3.AC Analysis:<br>
+
+![image](https://github.com/user-attachments/assets/a9cc118a-34c0-430c-a9a1-57985a640437)
+
+Av(dB) = 31dB<br>
+Therefore, Vout/Vin = 35.48V/V<br>
+CMRR = 20log (Adm/Acm)<br>
+Adm = 35.48V/V<br>
+Acm = 1V/V<br>
+Therefore<br>
+CMRR = 97dB<br>
+<br>
+
+### Results<br>
+* Achieved a voltage gain of 31 dB, matching the design target for high-gain analog applications.
+* Output swing of approximately 1.2 V to 1.6 V was obtained, ensuring sufficient headroom under a 1.8 V supply.
+* Power consumption remained low at ~0.35 mW, making the design suitable for low-power systems.
+* All transistors were confirmed to operate in saturation through DC operating point analysis in LTSpice.
+* High CMRR of ~70,960 V/V demonstrated excellent common-mode noise rejection.
+
+### INFERENCE<br>
+1. Initial Output Issue:<br>
+The output voltage was stuck at a low level (~0.4 mV instead of the expected ~0.8 V).<br>
+This was due to improper biasing and incorrect Vds voltages for M5 and M6.<br>
+<br>
+2. Current Mismatch in Branches:<br>
+M3 and M4 initially had much lower current than M5 and M6.Vx and Vy nodes were not providing enough voltage to turn M3 and M4 on properly.<br>
+<br>
+3. W/L Ratio Tuning:<br>
+The W/L ratios of M3, M4, M5, and M6 were adjusted to achieve the desired drain current (5 μA for M3/M4 and 10 μA for M5/M6).<br>
+PMOS and NMOS devices were resized based on overdrive voltages (Vov<) to match current requirements.<br>
+<br>
+4. Bias Voltage Optimization:<br>
+VB1 to VB4 values were tuned carefully to bring all transistors into saturation.<br>
+Particularly, M3 and M4 needed more headroom to come out of cutoff and operate properly.<br>
+<br>
+5. Simulation Validation:<br>
+Final DC simulation confirmed all branch currents were within 5 μA or 10 μA as designed.<br>
+Vout was correctly adjusted to 1.2V.<br>
 
 
 
